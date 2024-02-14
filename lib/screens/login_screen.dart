@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Text(
+        title: const Text(
           'promillo',
           style: TextStyle(
             fontWeight: FontWeight.w600,
@@ -311,7 +311,7 @@ class _LoginScreenState extends State<LoginScreen> {
         // Handle successful login
         print('Login successful');
         print('Response body: ${response.body}');
-        Get.offAll(()=> DashboardAppScreen());
+        Get.offAll(()=> const DashboardAppScreen());
         // Get.to(()=> HomeScreen());
       } else {
         // Handle error
