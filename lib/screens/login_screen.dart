@@ -277,11 +277,12 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Future<void> loginUser() async {
+
     const String url = 'https://apiv2stg.promilo.com/user/oauth/token';
-    final String username = 'test45@yopmail.com';
-    final String password = 'Test@123'; // SHA256 hash of the password
-    // final String username = mailCtr.text;
-    // final String password = pwdCtr.text; // SHA256 hash of the password
+    // final String username = 'test45@yopmail.com';
+    // final String password = 'Test@123'; // SHA256 hash of the password
+    final String username = mailCtr.text;
+    final String password = pwdCtr.text; // SHA256 hash of the password
 
     // Convert the password to SHA256 hash
     final String hashedPassword = _sha256(password);
