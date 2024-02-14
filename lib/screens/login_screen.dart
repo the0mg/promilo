@@ -125,7 +125,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   txtWeight: FontWeight.w600,
                   bgColor: ColorConst.btnColor,
                   borderColor: ColorConst.secondaryColor,
-                  onPress: () => loginUser(),
+                  onPress: () {
+                    if(isValid){
+                      loginUser();
+                    }
+                  },
                 ),
                 const SizedBox(height: 25,),
                 Row(
@@ -275,6 +279,7 @@ class _LoginScreenState extends State<LoginScreen> {
     var snackBar = SnackBar(content: Text(msg));
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+
 
   Future<void> loginUser() async {
 
