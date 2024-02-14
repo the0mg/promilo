@@ -126,7 +126,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   bgColor: ColorConst.btnColor,
                   borderColor: ColorConst.secondaryColor,
                   onPress: () {
-                    if(isValid){
+                    if(isValid()){
                       loginUser();
                     }
                   },
